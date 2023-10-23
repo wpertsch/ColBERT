@@ -13,7 +13,8 @@ def print_progress(scores):
 
 
 def manage_checkpoints(args, colbert, optimizer, batch_idx, savepath=None, consumed_all_triples=False):
-    arguments = dict(args)
+    # arguments = dict(args)
+    arguments = None
 
     # TODO: Call provenance() on the values that support it??
 
