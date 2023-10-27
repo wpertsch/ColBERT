@@ -16,7 +16,7 @@ class ColBERT(BaseColBERT):
         This class handles the basic encoding and scoring operations in ColBERT. It is used for training.
     """
 
-    def __init__(self, name='bert-base-uncased', colbert_config=None):
+    def __init__(self, name='roberta-base', colbert_config=None):
         super().__init__(name, colbert_config)
         self.use_gpu = colbert_config.total_visible_gpus > 0
 
