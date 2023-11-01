@@ -113,7 +113,7 @@ def class_factory(name_or_path):
         def from_pretrained(cls, name_or_path, colbert_config):
             if name_or_path.endswith('.dnn'):
                 dnn = torch_load_dnn(name_or_path)
-                base = dnn.get('arguments', {}).get('model', 'bert-base-uncased')
+                base = dnn.get('arguments', {}).get('model', 'microsoft/codebert-base')
 
                 obj = super().from_pretrained(base, state_dict=dnn['model_state_dict'], colbert_config=colbert_config)
                 obj.base = base
