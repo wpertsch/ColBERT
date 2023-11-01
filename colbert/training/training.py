@@ -23,10 +23,6 @@ from colbert.training.utils import print_progress, manage_checkpoints
 def train(config: ColBERTConfig, triples, queries=None, collection=None):
     config.checkpoint = config.checkpoint or 'microsoft/codebert-base'
     config.checkpoint = 'microsoft/codebert-base'
-    print_progress("this is the training print!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-                   "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-                   "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++***++++++++++++++++++++++++++****++++++++****++++++**"
-                   "+++++++++++++++++++++++++++++++++++******++++++***+++++***++++***++++***+++++***++++***++++****++")
     if config.rank < 1:
         config.help()
 
